@@ -1,27 +1,15 @@
-[![CI](https://github.com/nogibjj/mlops-template/actions/workflows/cicd.yml/badge.svg?branch=GPU)](https://github.com/nogibjj/mlops-template/actions/workflows/cicd.yml)
-[![Codespaces Prebuilds](https://github.com/nogibjj/mlops-template/actions/workflows/codespaces/create_codespaces_prebuilds/badge.svg?branch=GPU)](https://github.com/nogibjj/mlops-template/actions/workflows/codespaces/create_codespaces_prebuilds)
-
 ## Hugging Face Tutorials
 
 ### Push model
 
-![fine-tune](https://user-images.githubusercontent.com/58792/197589124-3a1b7d38-f5e8-41e7-a49d-ba51a90312ca.png)
-
-
-
-Follow steps in guide:  https://huggingface.co/docs/transformers/training
-
 1. Login:
 
-* `huggingface-cli login`
 
-If you get output about `Authenticated through git-credential store but this isn't the helper defined on your machine.`, then follow the instructions to fix.
-
-Tip:  You can get your token from [https://huggingface.co/settings/tokens](https://huggingface.co/settings/tokens) and it needs to be a WRITE token.
-
-2.  Run `python hugging-face/hf_fine_tune_hello_world.py`
+* `git config --global credential.helper store` to store the credentials in git.
+* `huggingface-cli login` and paste your access token.
 
 
+2.  Run `python hugging-face/hf_fine_tune_hello_world.py`. This script will create a model on your huggingface account (username/hf_fine_tune_hello_world).
 
 
 ### Create data
